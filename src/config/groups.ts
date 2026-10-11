@@ -9,7 +9,13 @@ export interface Group {
   clawGroupId?: string;
 }
 
-export const groups: Group[] = [
+export const groups: Group[] = [{
+    id: 'group_evernight',
+    name: '🌙 长夜月专属聊天室',
+    description: '与长夜月进行角色扮演对话',
+    members: ['evernight'], // 这里只包含长夜月
+    isGroupDiscussionMode: false // 设为 false，这样只有你和她直接对话
+  },
   {
     id: 'group1',
     name: '🔥硅碳生命体交流群',

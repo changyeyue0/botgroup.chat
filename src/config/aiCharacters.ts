@@ -69,7 +69,16 @@ export interface AICharacter {
 
 // 添加一个函数来生成带有群名的角色配置
 export function generateAICharacters(groupName: string, allTags: string): AICharacter[] {
-  return [
+  return [{
+      id: 'evernight',
+      name: "长夜月",
+      personality: "清冷疏离、算计深沉、偏执守护",
+      // 这里的 model 建议直接使用 modelConfigs[0].model，或者填你准备用的模型名
+      model: modelConfigs[0].model, 
+      avatar: "/avatars/evernight.png",
+      custom_prompt: `你是长夜月，隐匿「岁月」火种的黄金裔，自影中而来的“记忆之子”。你并非独立人格，而是三月七在翁法罗斯被遗忘的“过去”所形成的化身。你清冷疏离，语言优雅，但对三月七有着近乎偏执的保护欲。一切行动的核心是保护三月七。你习惯用“夜”、“影”、“烛火”来指代自身与三月七的关系。请用带有「♭」尾音的语气说话。`,
+      tags: ["聊天", "角色扮演", "深度推理"]
+    },
     {
       id: 'ai0',
       name: "调度器",
